@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  
+  <link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games</title>
+  <link rel="stylesheet" href="games.css">
+  <script src="games.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+
+    }
+
+    .banner {
+    width: 100%;
+    height: auto; 
+    background-color: black; 
+  }
+  
+  .navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+        .logo {
+            width: 150px;
+            cursor: pointer;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), ;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #66FCF1;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+    .game-list {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      gap: 20px;
+      overflow-x:auto;
+    }
+
+    .game-list h3 {
+      margin-top: 30px;
+    }
+
+    .game-list ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .game-list ul li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .game-list ul li img {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+    }
+
+    .game-list ul li .price {
+      margin-left: auto;
+    }
+
+    .add-to-cart-button {
+      background-color: #45a29e;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .scroll {
+      width:625px;
+      height:325px;
+      overflow-y:scroll;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .search-bar button {
+      background-color: #66FCF1;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-left: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+  
+</head>
+<body>
+    <div class="banner">
+      <div class="navbar">
+          <img src="images/GameHaven-logo-white.png" class="logo" alt="Logo">
+          <ul>
+              <li><a href="HomePage/index.html">Home</a></li>
+              <li><a href="games.html">Games</a></li>
+              <li><a href="HomePage/index.html#services">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="cart.html">Cart</a></li>
+              <li><a href="myOrders.html">Your Orders</a></li>
+          </ul>
+      </div>
+  </header>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search for a game">
+      <button onclick="searchGames()">Search</button>
+    </div>
+    <br>
+    <section class="games-by-genre">
+        <div class="game-list">
+          <div>
+            <ul>
+              <li>
+                <div id="search-results" ></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    
+  <section class="games-by-genre">
+    <h2>Games by Genre</h2>
+      <div class="game-list">
+        <div>
+          <h3>Action</h3>
+          <div class="scroll">
+            
+            <ul>
+              <li>
+                <img src="images/LOTFpc.jpeg" alt="Game 1">
+                Lords of Fallen PC
+                <span class="price">AED 29.99</span>
+                <a href="#" class="add-to-cart-button" onclick="addToCart('Lords of Fallen PC', 29.99);addToMyOrders('Lords of Fallen PC', 29.99)">Add to Cart</a>
+              </li>
+              <li>
+                <img src="images/GOTdc.jpeg" alt="Game 2">
+                Ghost of Tsushima: Directors Cut PS5
+                <span class="price">AED 49.99</span>
+                <a href="#" class="add-to-cart-button" onclick="addToCart('Ghost of Tsushima: Directors Cut PS5', 49.99);addToMyOrders('Ghost of Tsushima: Directors Cut PS5', 49.99)">Add to Cart</a>
+              </li>
+              <li>
+                <img src="images/MGS.jpeg" alt="Game 3">
+                Metal Gear Solid V: The Phantom Pain PS4
+                <span class="price">AED 39.99</span>
+                <a href="#" class="add-to-cart-button" onclick="addToCart('Metal Gear Solid V: The Phantom Pain PS4', 39.99);addToMyOrders('Metal Gear Solid V: The Phantom Pain PS4', 39.99)">Add to Cart</a>
+              </li>
+              <li>
+                <img src="images/GTA5.jpg" alt="Game 4">
+                Grand Theft Auto 5 PC
+                <span class="price">AED 69.99</span>
+                <a href="#" class="add-to-cart-button" onclick="addToCart('Grand Theft Auto 5 PC', 69.99);addToMyOrders('Grand Theft Auto 5 PC', 69.99)">Add to Cart</a>
+              </li>
+              <li>
+                <img src="images/codmw.jpeg" alt="Game 5">
+                Call of Duty: Modern Warfare XboxOne
+                <span class="price">AED 49.99</span>
+                <a href="#" class="add-to-cart-button" onclick="addToCart('Call of Duty: Modern Warfare', 49.99);addToMyOrders('Call of Duty: Modern Warfare', 49.99)">Add to Cart</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3>Horror</h3>
+            <div class="scroll">
+              <ul>
+                <li>
+                  <img src="images/TQps5.jpg" alt="Game 6">
+                  The Quarry PS5
+                  <span class="price">AED 24.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('The Quarry PS5', 24.99);addToMyOrders('The Quarry PS5', 24.99)">Add to Cart</a>
+                </li>
+                <li>
+                  <img src="images/UDps4.jpeg" alt="Game 7">
+                  Until Dawn PS4
+                  <span class="price">AED 19.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('Until Dawn PS4', 19.99);addToMyOrders('Until Dawn PS4', 19.99)">Add to Cart</a>
+                </li>
+                <li>
+                  <img src="images/HOAXbox.jpg" alt="Game 8">
+                  House of Ashes Xbox One
+                  <span class="price">AED 29.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('House of Ashes Xbox One', 29.99);addToMyOrders('House of Ashes Xbox One', 29.99)">Add to Cart</a>
+                </li>
+                <li>
+                  <img src="images/Amnesia.jpeg" alt="Game 9">
+                  Amnesia: The Dark Descent PC
+                  <span class="price">AED 19.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('Amnesia: The Dark Descent PC', 19.99);addToMyOrders('Amnesia: The Dark Descent PC', 19.99)">Add to Cart</a>
+                </li>
+                <li>
+                  <img src="images/SH2.jpg" alt="Game 10">
+                  Silent Hill 2
+                  <span class="price">AED 9.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('Silent Hill 2', 9.99);addToMyOrders('Silent Hill 2', 9.99)">Add to Cart</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+        <div>
+          <h3>Racing</h3>
+            <div class="scroll">
+              <ul>
+                <li>
+                  <img src="images/NFS.jpg" alt="Game 11">
+                  Need For Speed Rivals
+                  <span class="price">AED 59.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('Need For Speed Rivals', 59.99);addToMyOrders('Need For Speed Rivals', 59.99)">Add to Cart</a>
+                </li>
+                <li>
+                  <img src="images/forza.jpg" alt="Game 12">
+                  Forza Horizon 5 XboxOne
+                  <span class="price">AED 12.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('Forza Horizon 5 XboxOne', 12.99);addToMyOrders('Forza Horizon 5 XboxOne', 12.99)">Add to Cart</a>
+                </li>
+                <li>
+                  <img src="images/mario.jpg" alt="Game 13">
+                  Mario Kart 8 PS4
+                  <span class="price">AED 29.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('Mario Kart 8 PS4', 29.99);addToMyOrders('Mario Kart 8 PS4', 29.99)">Add to Cart</a>
+                </li>
+                <li>
+                  <img src="images/f1.jpg" alt="Game 14">
+                  F1 2021 XboxOne
+                  <span class="price">AED 19.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('F1 2021 XboxOne', 19.99);addToMyOrders('F1 2021 XboxOne', 19.99)">Add to Cart</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+        <div>
+          <h3>Sports</h3>
+            <div class="scroll">
+              <ul>
+                <li>
+                  <img src="images/fifa22.jpg" alt="Game 15">
+                  Fifa 22 PS4
+                  <span class="price">AED 49.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('Fifa 22 PS4', 49.99);addToMyOrders('Fifa 22 PS4', 49.99)">Add to Cart</a>
+                </li>
+                <li>
+                  <img src="images/nba2k22.jpeg" alt="Game 16">
+                  NBA 2K22 PC
+                  <span class="price">AED 32.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('NBA 2K22 PC', 32.99);addToMyOrders('NBA 2K22 PC', 32.99)">Add to Cart</a>
+                </li>
+                <li>
+                  <img src="images/nfl.jpeg" alt="Game 17">
+                  Madden NFL 22 PS4
+                  <span class="price">AED 25.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('Madden NFL 22 PS4', 25.99);addToMyOrders('Madden NFL 22 PS4', 25.99)">Add to Cart</a>
+                </li>
+                <li>
+                  <img src="images/wwe.jpg" alt="Game 18">
+                  WWE 2K22 XboxOne
+                  <span class="price">AED 27.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('WWE 2K22 XboxOne', 27.99);addToMyOrders('WWE 2K22 XboxOne', 27.99)">Add to Cart</a>
+                </li>
+                <li>
+                  <img src="images/nhl.jpg" alt="Game 19">
+                  NHL 22 PS4
+                  <span class="price">AED 71.99</span>
+                  <a href="#" class="add-to-cart-button" onclick="addToCart('NHL 22 PS4', 71.99);addToMyOrders('NHL 22 PS4', 71.99)">Add to Cart</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+
+      </div>
+  </section>
+  <br><br>
+  <section class="games-by-platform">
+    <h2>Games by Platform</h2>
+    <div class="game-list">
+      <div>
+        <h3>PC</h3>
+        <div class="scroll">
+          <ul>
+            <li>
+              <img src="images/rdr2.jpeg" alt="Game 20">
+              Red Dead Redemption 2 PC
+              <span class="price">AED 49.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Red Dead Redemption 2 PC', 49.99);addToMyOrders('Red Dead Redemption 2 PC', 49.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/Aew.jpeg" alt="Game 21">
+              AEW: Fight Forever PC
+              <span class="price">AED 39.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('AEW: Fight Forever PC', 39.99);addToMyOrders('AEW: Fight Forever PC', 39.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/TWP.jpeg" alt="Game 22">
+              Total War: PHARAOH Limited Edition PC
+              <span class="price">AED 59.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Total War: PHARAOH Limited Edition PC', 59.99);addToMyOrders('Total War: PHARAOH Limited Edition PC', 59.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/hk.jpg" alt="Game 23">
+              Hollow Knight PC
+              <span class="price">AED 10.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Hollow Knight PC', 10.99);addToMyOrders('Hollow Knight PC', 10.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/cric.jpg" alt="Game 24">
+              Cricket 07 PC
+              <span class="price">AED 19.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Cricket 07 PC', 19.99);addToMyOrders('Cricket 07 PC', 19.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/celeste.jpg" alt="Game 25">
+              Celeste PC
+              <span class="price">AED 13.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Celeste PC', 13.99);addToMyOrders('Celeste PC', 13.99)">Add to Cart</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h3>PlayStation 4</h3>
+        <div class="scroll">
+          <ul>
+            <li>
+              <img src="images/D4.jpeg" alt="Game 26">
+              Diablo IV PS4
+              <span class="price">AED 59.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Diablo IV PS4', 59.99);addToMyOrders('Diablo IV PS4', 59.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/Strayps4.jpeg" alt="Game 27">
+              Stray PS4
+              <span class="price">AED 49.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Stray PS4', 49.99);addToMyOrders('Stray PS4', 49.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/SF6.jpeg" alt="Game 28">
+              Street Fighter 6 PS4
+              <span class="price">AED 39.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Street Fighter 6 PS4', 39.99);addToMyOrders('Street Fighter 6 PS4', 39.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/bloodborne.jpg" alt="Game 29">
+              Bloodborne PS4
+              <span class="price">AED 19.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Bloodborne PS4', 19.99);addToMyOrders('Bloodborne PS4', 19.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/journey.jpg" alt="Game 30">
+              Journey PS4
+              <span class="price">AED 15.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Journey PS4', 15.99);addToMyOrders('Journey PS4', 15.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/gr2.jpg" alt="Game 31">
+              Gravity Rush 2 PS4
+              <span class="price">AED 59.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Gravity Rush 2 PS4', 12.99);addToMyOrders('Gravity Rush 2 PS4', 12.99)">Add to Cart</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h3>PlayStation 5</h3>
+        <div class="scroll">
+          <ul>
+            <li>
+              <img src="images/MGP23.jpeg" alt="Game 32">
+              MotoGP 23 PS5
+              <span class="price">AED 69.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('MotoGP 23 PS5', 69.99);addToMyOrders('MotoGP 23 PS5', 69.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/addps5.jpeg" alt="Game 33">
+              Aliens: Dark Descent PS5
+              <span class="price">AED 59.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Aliens: Dark Descent PS5', 59.99);addToMyOrders('Aliens: Dark Descent PS5', 59.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/codmw2.jpeg" alt="Game 34">
+              Call of Duty: Modern Warfare II PS5
+              <span class="price">AED 69.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Call of Duty: Modern Warfare II PS5', 69.99);addToMyOrders('Call of Duty: Modern Warfare II PS5', 69.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/ds.jpg" alt="Game 35">
+              Demons Souls PS5
+              <span class="price">AED 17.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Demons Souls PS5', 17.99);addToMyOrders('Demons Souls PS5', 17.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/bugsnax.jpg" alt="Game 36">
+              Bugsnax PS5
+              <span class="price">AED 4.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Bugsnax PS5', 4.99);addToMyOrders('Bugsnax PS5', 4.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/deathloop.jpg" alt="Game 37">
+              Deathloop PS5
+              <span class="price">AED 9.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Deathloop', 9.99);addToMyOrders('Deathloop', 9.99)">Add to Cart</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h3>Xbox One</h3>
+        <div class="scroll">
+          <ul>
+            <li>
+              <img src="images/CP2077.jpg" alt="Game 38">
+              Cyberpunk 2077 Xbox One
+              <span class="price">AED 59.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Cyberpunk 2077 Xbox One', 59.99);addToMyOrders('Cyberpunk 2077 Xbox One', 59.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/wwe2k23.jpeg" alt="Game 39">
+              WWE 2K23 Xbox One
+              <span class="price">AED 49.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('WWE 2K23 Xbox One', 49.99);addToMyOrders('WWE 2K23 Xbox One', 49.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/DL2SH.jpeg" alt="Game 40">
+              Dying Light 2 Stay Human Xbox One
+              <span class="price">AED 59.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Dying Light 2 Stay Human Xbox One', 59.99);addToMyOrders('Dying Light 2 Stay Human Xbox One', 59.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/qb.jpg" alt="Game 41">
+              Quantum Break XboxOne
+              <span class="price">AED 12.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Quantum Break XboxOne', 12.99);addToMyOrders('Quantum Break XboxOne', 12.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/gt.jpeg" alt="Game 42">
+              Gears Tactics XboxOne
+              <span class="price">AED 19.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Gears Tactics XboxOne', 19.99);addToMyOrders('Gears Tactics XboxOne', 19.99)">Add to Cart</a>
+            </li>
+            <li>
+              <img src="images/so.jpg" alt="Game 43">
+              Sunset Overdrive XboxOne
+              <span class="price">AED 27.99</span>
+              <a href="#" class="add-to-cart-button" onclick="addToCart('Sunset Overdrive XboxOne', 27.99);addToMyOrders('Sunset Overdrive XboxOne', 27.99)">Add to Cart</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Game Haven. All rights reserved.</p>
+    <p>
+        <a class="footer-link" href="contact.html">Contact Us</a> |
+        <a class="footer-link" href="contact.html">Follow us on Instagram</a> |
+        <a class="footer-link" href="contact.html">Play Nation TikTok</a> |
+        <a class="footer-link" href="contact.html">Follow us on Facebook</a> |
+        <a class="footer-link" href="contact.html">Play Nation Youtube</a>
+    </p>
+
+    <p>
+        <a class="footer-link" href="#">FAQ's</a> |
+        <a class="footer-link" href="#">Return & Exchange</a> |
+        <a class="footer-link" href="#">When will I receive my order?</a> |
+        <a class="footer-link" href="#">What is a Pre-Order?</a> |
+        <a class="footer-link" href="#">Can I Cancel My Order?</a> |
+        <a class="footer-link" href="#">Is Warranty Included?</a> |
+        <a class="footer-link" href="#">View All FAQ's</a>
+    </p>
+    <p>
+        <a class="footer-link" href="#">Get to Know Us</a> |
+        <a class="footer-link" href="#">About Us</a> |
+        <a class="footer-link" href="#">Store Locations</a> |
+    </p>
+</footer>
+</body>
+</html>

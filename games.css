@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: black;
+  color:white;
+}
+
+
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: white;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+header {
+  background: linear-gradient(to bottom, #333, #111);
+  color: #fff;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #aaa;
+}
+
+.hero {
+  background-color: lightblue;
+  padding: 30px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: #000000;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.games {
+  padding: 40px;
+  text-align: center;
+}
+
+.games h2 {
+  margin-bottom: 20px;
+}
+
+.game-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.game-card,
+.service-card {
+  flex: 0 0 300px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover,
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.game-card h3,
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.game-card img,
+.service-card img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.services {
+  background-color: #f1f1f1;
+  padding: 40px;
+  text-align: center;
+  background-color: lightblue;
+}
+
+.services h2 {
+  margin-bottom: 20px;
+}
+
+.service-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  flex: 0 0 300px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.service-card img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.cart-icon {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cart-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.cart-icon:hover {
+  background-color: #e1e1e1;
+}
+
+
+.cart-image {
+  width: 30px; 
+  height: 30px;
+  margin-top:15px; 
+}
+
+footer {
+  background: #45a29e;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .nav-links li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .game-card,
+  .service-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+::-webkit-scrollbar{
+  width: 12px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(black , #45A29E);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(transparent, #66FCF1);
+}

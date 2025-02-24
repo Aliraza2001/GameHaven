@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Haven - Home Page</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="cart.js"></script>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="images/GameHaven-logo-white.png" class="logo" alt="Logo">
+            <ul>
+                <li><a href="HomePage/index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="HomePage/index.html#services">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="myOrders.html">Your Orders</a></li>
+            </ul>
+        </div>
+    </div>
+    <h2>Your Cart: </h2><br>
+    <ul class="cart-items"></ul>
+    
+    <p>Total Price: <span id="total-price"></span></p> <br>
+    <button id="place-order-btn">Place Order</button>
+
+    <footer>
+        <p>&copy; 2023 Game Haven. All rights reserved.</p>
+        <p>
+            <a class="footer-link" href="contact.html">Contact Us</a> |
+            <a class="footer-link" href="contact.html">Follow us on Instagram</a> |
+            <a class="footer-link" href="contact.html">Play Nation TikTok</a> |
+            <a class="footer-link" href="contact.html">Follow us on Facebook</a> |
+            <a class="footer-link" href="contact.html">Play Nation Youtube</a>
+        </p>
+
+        <p>
+            <a class="footer-link" href="#">FAQ's</a> |
+            <a class="footer-link" href="#">Return & Exchange</a> |
+            <a class="footer-link" href="#">When will I receive my order?</a> |
+            <a class="footer-link" href="#">What is a Pre-Order?</a> |
+            <a class="footer-link" href="#">Can I Cancel My Order?</a> |
+            <a class="footer-link" href="#">Is Warranty Included?</a> |
+            <a class="footer-link" href="#">View All FAQ's</a>
+        </p>
+        <p>
+            <a class="footer-link" href="#">Get to Know Us</a> |
+            <a class="footer-link" href="#">About Us</a> |
+            <a class="footer-link" href="#">Store Locations</a> |
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById('place-order-btn').addEventListener('click', () => {
+            removeItemsFromCart();
+        });
+
+        function removeItemsFromCart() {
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '/removeAllFromCart', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onreadystatechange = function () { 
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    
+                    alert('Order placed successfully! A payment link will be sent to your email along with an invoice after which you can schedule for delivery or pick-up. Thank you for shopping at GameHaven :)');
+
+                    localStorage.removeItem('cartItems');
+                    displayCartItems();
+
+                    
+                    setTimeout(() => {
+                        location.reload();
+                    }, 5000);
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

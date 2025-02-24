@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #0B0c10;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 7px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1F2833;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+header .logo{
+    position: relative;
+    width: 150px;
+    margin-left: 25px;
+}
+
+header .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style:none;
+    margin: 20px;
+    /*test below*/
+    display: inline-block;
+    position: relative;
+}
+
+header ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}   
+
+header ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #45A29E;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+    /**/
+    bottom: -5px;
+}
+
+header ul li:hover:after{
+    width: 100%;
+}
+
+/*########## REWARDS SECTION ##########*/
+.rewards{
+    position: relative;
+    width: 100%;
+    min-height: 95vh;
+    padding: 0px 100px;
+    margin-bottom: -190px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.rewards .bg{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rewards .bg .content{
+    width: 50%;
+    height: 100%;
+}
+
+.rewards .bg .content h2{
+    font-size: 4em;
+    color: #45a29e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.rewards .bg .content h3{
+    font-size: 2em;
+    color: #45a29e;
+    letter-spacing: 1px;
+}
+
+.rewards .bg .content p{
+    font-size: 1em;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.rewards .bg .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #66fcf1;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.rewards .bg .content a:hover{
+    background: #66fcf1;
+    color: #0B0c10;
+    border: none;
+    box-shadow: 0 0 10px #66fcf1;
+}
+
+.rewards .bg .img{
+    width: 277px;
+    height: 252px;
+}
+
+.loyalty-program{
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    padding: 0px 100px;
+    margin-bottom: -100px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.loyalty-program .bg{
+    flex-direction: row-reverse; 
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.loyalty-program .bg .content{
+    width: 50%;
+    height: 100%;
+}
+
+.loyalty-program .bg .content h2{
+    font-size: 4em;
+    color: #45a29e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.loyalty-program .bg .content h3{
+    font-size: 2em;
+    color: #45a29e;
+    letter-spacing: 1px;
+}
+
+.loyalty-program .bg .content p{
+    font-size: 1em;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.loyalty-program .bg .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #66fcf1;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.loyalty-program .bg .content a:hover{
+    background: #66fcf1;
+    color: #0B0c10;
+    border: none;
+    box-shadow: 0 0 10px #66fcf1;
+}
+
+.loyalty-program .bg img{
+    width: 450px;
+    height: 325px;
+    padding-right: 100px;
+}
+
+.heading{
+    text-align: center;
+}
+
+.heading span{
+    color: #66fcf1;
+    font-weight: 600;
+}
+
+.heading h2{
+    font-size:larger;
+    color: white;
+}
+
+.options-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-gap:15px;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.box{
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255, .15);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.box:hover{
+    box-shadow: 0 0 5px #66fcf1;
+}
+
+.box-img{
+    width: 150px;
+    height: 150px;
+}
+
+.box-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.box h2{
+    font-size: 23px;
+    color:#66fcf1;
+}
+
+.box h3{
+    color:white;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 4px 0 10px;
+}
+
+.box span{
+    font-size: 12px;
+    color: white;
+    font-weight: 600;
+}
+
+.form-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.loyalty-program-form-group{
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.form-heading {
+    margin-bottom: 20px;
+    color: aliceblue;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.loyalty-program-form-group span {
+    margin-right: 5px;
+    color: #45a29e;
+}
+
+.loyalty-program-form-group input,
+.loyalty-program-form-group select {
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255, 255, 255, .65);
+}
+
+.loyalty-program-form-group input:focus,
+.loyalty-program-form-group select:focus{
+    background-color: lightcyan;
+}
+
+#submit-button {
+    width: 100px;
+    margin-top: 15px;
+    background-color: #45a29e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#submit-button:hover {
+    box-shadow: 0 0 5px #66fcf1;
+}
+
+.loyalty-program-form .form-username .material-symbols-rounded,
+.loyalty-program-form .form-password .material-symbols-rounded {
+  margin-right: 10px;
+  color: #66fcf1;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background-color: black;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient(black , #45A29E);
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent, #66FCF1);
+  }

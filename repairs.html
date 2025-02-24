@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repairs</title>
+    <link rel="stylesheet" href="repairs.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="images/GameHaven-logo-white.png" class="logo" alt="Logo">
+            <ul>
+                <li><a href="HomePage/index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="HomePage/index.html#services">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="myOrders.html">Your Orders</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="rewards">
+        <div class="bg">
+            <div class="content">
+                <h2>Repairs</h2>
+                <h3>Repair, Revive, Reignite!</h3>
+                <p>Get ready to level up your gaming experience with our ultimate repair service! Here at GameHaven, we've got your back when it comes to fixing your favorite gaming gear. Whether you're rocking a gaming laptop, PC, console, controller, or handheld device, our skilled technicians are here to save the day!</p>
+                <a href="#" id="repair-button" class="button">Need Repairing?</a>
+
+                <div id="repair-form" class="form-container" style="display: none;">
+
+                    <form>
+                        <label for="device-select">Select Device:</label>
+                        <select id="device-select" name="device">
+                            <option value="gaming-laptop">Gaming Laptop</option>
+                            <option value="pc">PC</option>
+                            <option value="console">Console</option>
+                            <option value="controller">Controller</option>
+                            <option value="handheld-device">Handheld Device</option>
+                        </select>
+                        <br>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+                        <br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <br>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone">
+                        <br>
+                        <input type="submit" id="submit-button" value="Submit">
+                    </form>
+                    <div id="form-response" style="display: none;"></div>
+                </div>
+            </div>
+            <img src="images/repair.png">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Game Haven. All rights reserved.</p>
+        <p>
+            <a class="footer-link" href="contact.html">Contact Us</a> |
+            <a class="footer-link" href="contact.html">Follow us on Instagram</a> |
+            <a class="footer-link" href="contact.html">Play Nation TikTok</a> |
+            <a class="footer-link" href="contact.html">Follow us on Facebook</a> |
+            <a class="footer-link" href="contact.html">Play Nation Youtube</a>
+        </p>
+    
+        <p>
+            <a class="footer-link" href="#">FAQ's</a> |
+            <a class="footer-link" href="#">Return & Exchange</a> |
+            <a class="footer-link" href="#">When will I receive my order?</a> |
+            <a class="footer-link" href="#">What is a Pre-Order?</a> |
+            <a class="footer-link" href="#">Can I Cancel My Order?</a> |
+            <a class="footer-link" href="#">Is Warranty Included?</a> |
+            <a class="footer-link" href="#">View All FAQ's</a>
+        </p>
+        <p>
+            <a class="footer-link" href="#">Get to Know Us</a> |
+            <a class="footer-link" href="#">About Us</a> |
+            <a class="footer-link" href="#">Store Locations</a> |
+        </p>
+    </footer> 
+    <script src="repairs.js"></script>
+</body>
+</html>

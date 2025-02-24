@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Haven - Home Page</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="contact.js"></script>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="images/GameHaven-logo-white.png" class="logo" alt="Logo">
+            <ul>
+                <li><a href="HomePage/index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="HomePage/index.html#services">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="myOrders.html">Your Orders</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Connect With Us</h1>
+        <p>We would love to respond to your queries and help you.<br>Feel free to get in touch with us.</p>
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>Send your request</h3>
+                <form onsubmit="return validateForm();">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="name">Name: </label>
+                            <input type="text" id="name" placeholder="Ex: Syed Ali" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone: </label>
+                            <input type="text" id="phone" placeholder="Ex: +971 50 485 6115" required>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" placeholder="Ex: syed@gmail.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="subject">Subject: </label>
+                            <input type="text" id="subject" placeholder="Ex: Installation" required>
+                        </div>
+                    </div>
+                    <label for="message">Message: </label>
+                    <textarea rows="5" id="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">SEND</button>
+                </form>
+                <div id="confirmation" class="confirmation" style="display: none;">Your message has been submitted!</div>
+            </div>
+            <div class="contact-right">
+                <h3>Reach us</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        
+                        <i class="fas fa-envelope"></i> 
+                        Email : 
+                        <span>support@playnation.com</span>
+                        
+                        <br><br><br><br>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        Phone Number : 
+                        <span>+971 50 485 6115</span>
+                        <br><br><br><br>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Address: 
+                        <span>
+                            UOWD Building Al Sufouh - Dubai 
+                            
+                        </span>
+                        <br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Game Haven. All rights reserved.</p>
+        <p>
+            <a class="footer-link" href="contact.html">Contact Us</a> |
+            <a class="footer-link" href="contact.html">Follow us on Instagram</a> |
+            <a class="footer-link" href="contact.html">Play Nation TikTok</a> |
+            <a class="footer-link" href="contact.html">Follow us on Facebook</a> |
+            <a class="footer-link" href="contact.html">Play Nation Youtube</a>
+        </p>
+
+        <p>
+            <a class="footer-link" href="#">FAQ's</a> |
+            <a class="footer-link" href="#">Return & Exchange</a> |
+            <a class="footer-link" href="#">When will I receive my order?</a> |
+            <a class="footer-link" href="#">What is a Pre-Order?</a> |
+            <a class="footer-link" href="#">Can I Cancel My Order?</a> |
+            <a class="footer-link" href="#">Is Warranty Included?</a> |
+            <a class="footer-link" href="#">View All FAQ's</a>
+        </p>
+        <p>
+            <a class="footer-link" href="#">Get to Know Us</a> |
+            <a class="footer-link" href="#">About Us</a> |
+            <a class="footer-link" href="#">Store Locations</a> |
+        </p>
+    </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: black;
+    color: white;
+    
+}
+
+.banner {
+  width: 100%;
+  height: auto; 
+  background-color: black; 
+  
+}
+
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+      .logo {
+          width: 150px;
+          cursor: pointer;
+          background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), ;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+      }
+
+      .navbar ul li {
+          list-style: none;
+          display: inline-block;
+          margin: 0 20px;
+          position: relative;
+      }
+
+      .navbar ul li a {
+          text-decoration: none;
+          color: white;
+          text-transform: uppercase;
+      }
+
+      .navbar ul li::after {
+          content: '';
+          height: 3px;
+          width: 0;
+          background: #66FCF1;
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          transition: 0.5s;
+      }
+
+      .navbar ul li:hover::after {
+          width: 100%;
+      }
+
+/*rewards section*/
+.rewards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    padding: 80px 100px;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .rewards .bg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rewards .bg .img {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  
+  .rewards .bg .content {
+    flex: 1;
+    padding-right: 100px;
+    position: relative;
+    z-index: 1;
+    margin-top: -350px; 
+  }
+  
+  
+
+  .rewards .bg .content h2 {
+    font-size: 4em;
+    color: #45a29e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 100px; 
+  }
+
+.rewards .bg .content h3{
+    font-size: 2em;
+    color: #45a29e;
+    letter-spacing: 1px;
+}
+
+.rewards .bg .content p{
+    font-size: 1em;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.rewards .bg .content a{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: 1px solid #66fcf1;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.rewards .bg .content a:hover{
+    background: #66fcf1;
+    color: #0B0c10;
+    border: none;
+    box-shadow: 0 0 10px #66fcf1;
+}
+
+footer {
+  background: #45a29e;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+
+.form-container {
+    margin-top: 30px;
+  }
+  
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #45a29e;
+  }
+  
+  
+  .form-container input,
+  .form-container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  
+  #submit-button {
+    background-color: #45a29e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  #submit-button:hover {
+    background-color: #66fcf1;
+  }
+
+  ::-webkit-scrollbar{
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background-color: black;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient(black , #45A29E);
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent, #66FCF1);
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .rewards .bg .content {
+      width: 100%;
+    }
+  }
